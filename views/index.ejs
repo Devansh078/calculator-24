@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="viewport" content="width=device-width, intial-scale=1">
+    <title>Calculator</title>
+    <style>
+        *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        }
+        body{
+        text-align:center;
+        margin:25px;
+        padding:10px;
+        background:skyblue;
+        }
+
+        .container {
+          width: 540px;
+          height: 410px;
+          padding: 10px;
+          border-radius: 5px;
+          margin:auto;
+
+          background-color:silver;
+          text-align:left;
+        }
+
+        .h1{
+          margin-bottom: 20px;
+        }
+        input[type=text]{
+        width:64%;
+        border-radius:4px;
+        padding:14px 25px;
+        margin:8px 4px;
+        display:1px solid #ccc;
+        border-radius:2px solid white;
+        box-sizing:border-box;
+        align-items:center;
+        background:silver;
+
+        }
+        input[type=button]{
+        padding:1px 2px;
+        margin:3px;
+        items-align:left;
+        }
+
+        .result {
+          text-align: center;
+          text-decoration: none;
+          padding: 5px 20px;
+          margin: 2px 10px;
+          border: 2px solid gray;
+          border-radius: 10px;
+          border:none;
+        }
+        div.button{
+        width:28%;
+        height:80px;
+        padding:06px 08px;
+        position:relative;
+        font-size:06px;
+        background:none;
+        top:-12px;
+        left:355px;
+        align-items:left;
+
+        }
+
+   div.submit_btn{
+   position:relative;
+   background:none;
+   width:23%;
+   margin:2px;
+   padding:10px 14px;
+   top:12px;
+
+   left:350px;
+   }
+    .btn{
+       items-align:left;
+       width:36%;
+       height:40px;
+       border-radius:5px;
+       background:black;
+       color:white;}
+       div.btn{
+       position:relative;
+       top:5px;
+       left:105px;
+       }
+        .equal-button {
+          padding: 5px 30px;
+          border-radius: 8px;
+          border: none;
+          margin:8px 1px;;
+        }
+        iframe{
+        background:silver;
+        border:silver;
+        }
+
+        .equal-button:hover {
+          cursor: pointer;
+          background-color: rgba(75, 57, 33, 0.685);
+          transform: scale(1.1);
+        }
+       .clear-button {
+          padding: 5px 30px;
+          border-radius: 8px;
+          border:none;
+        }
+
+        .clear-button:hover {
+          cursor: pointer;
+          background-color: rgba(75, 57, 33, 0.685);
+          transform: scale(1.1);
+        }
+        @media(min-width:480px) {
+
+          body{
+          text-align:center;
+          background:rgb(73,83,77);
+          .container {max-width:650px;
+          padding:20px 12px;
+          margin-right:200px;
+             float:center;}
+
+
+          }
+        }
+        </style>
+  </head>
+<body>
+<h1>Welcome our Calculator</h1>
+  <div class="container">
+
+      <form action="/" method="post" target="output" class="form1">
+        <input type="text" name="num1" placeholder="First Number" class="inp1" required><br>
+        <input type="text" name="num2" placeholder="Second Number" class="inp1" required><br>
+        <div class="button">
+        <input type="button" value="+" name="button" onclick="oper(this.value)" class="btn">
+        <input type="button" value="-" name="button" onclick="oper(this.value)" class="btn"><br>
+        <input type="button" value="*" name="button" onclick="oper(this.value)" class="btn">
+        <input type="button" value="/" name="button" onclick="oper(this.value)" class="btn"><br>
+         </div>
+        <!--<input type="button" value="%" name="button" onclick="oper(this.value)" class="btn">-->
+
+        <div class="submit_btn">
+        <button type="submit" name="submit" id="equalbtn" class="equal-button">=</button>
+        <input type="reset" value="AC" class="clear-button"><br><br>
+        </div>
+        <iframe name="output" src="" width="300" class="result" height="50">
+        </iframe>
+      </form>
+      <a href="/user/history1"><button class="btn-his">History</button></a>
+    </div>
+    <script>
+    function oper(val) {
+      document.getElementById("equalbtn").value = val;
+    }
+  </script>
+  </body>
+</html>
